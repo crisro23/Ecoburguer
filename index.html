@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco burger</title>
+  
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="jquery.fancybox.min.css">
+
+</head>
+<body>
+
+
+<!-----------------SECCIÓN HEADER---------------->
+body>
+	<div id="contenedor-principal">
+		<header id="menu">
+			<div id="menu-bar">
+				<h1 id="logo">Eco Burguer</h1>	
+				<ul id="burguer">
+					<li>
+						<a href="#menu">
+						<div id="burger-lines">
+							<picture>
+								<source srcset="img\Menuhamburguesa.png" media="(max-width: 480px)">		
+								<source srcset="img\Menuhamburguesa.png" media="(min-width: 320px)">	
+								<img src="img\Menuhamburguesa.png" alt="burger menu icon">
+								</picture>						   
+						</div>  
+						</a>
+					</li>
+				</ul>	
+			</div>				
+			<nav>
+				<ul id="barra">
+					<li>
+						<a href="#">
+							<div id="burger-close">
+							<picture>
+								<source srcset="img/cross (2).png" media="(max-width: 480px)">		
+								<source srcset="img/cross (2).png" media="(min-width: 481px)">	
+								<img src="img/cross (2).png" alt="burger menu icon">
+								</picture>	
+							</div>
+						</a>
+					</li>				
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#productos">Productos</a></li>
+					<li><a href="#destacados">Video</a></li>
+					<li><a href="#nosotros">Nosotros</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+    <!---
+<header>
+  <h1 id="logo"> mi marca</h1>
+  <nav id="menu">
+    <ul id="burger">
+      <li><a href="#menu">Abrir</a></li>
+      <li><a href="#">Cerrar</a></li>
+    </ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#producto">Productos</a></li>
+      <li><a href="#Destacados">Dstacados</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+--->
+<!-------------------SECCIÓN CARRUSEL---------------------->
+  <section id="carrusel">
+    <h2>carrusel</h2>
+  
+    <div class="slideshow-container">
+
+      <div class="slides fade">
+        <picture>
+          <source srcset="carru/carru-03-cel.jpg" media="(max-width: 480px)">		
+          <source srcset="carru/carru-03-tab.jpg" media="(min-width: 481px)">	
+          <img src="Carru/carru-01-pc.jpg" alt="Carrussel imagen 1">
+        </picture>				
+      </div>
+
+      <div class="slides fade">
+        <picture>
+          <source srcset="Carru/carru-01-cel.jpg" media="(max-width: 480px)">		
+          <source srcset="carru/carru-01-tab.jpg" media="(min-width: 481px)">	
+          <img src="Carru/carru-01-cel.jpg" alt="Carrussel imagen 1">
+        </picture>	
+      </div>
+
+      <div class="slides fade">
+        <picture>
+          <source srcset="carru/carru-02-cel.jpg" media="(max-width: 480px)">		
+          <source srcset="carru/carru-02-tab.jpg" media="(min-width: 481px)">	
+          <img src="Carru/carru-02-pc.jpg" alt="Carrussel imagen 1">
+        </picture>	
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>	
+  
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </section>	
+
+
+
+
+  
+  <!-------------------SECCIÓN PRODUCTOS---------------------->
+
+  <section id="prodcutos">
+
+    <h2>Productos</h2>
+
+    <div id="productos-contenedor">
+      <!-- Producto 1 -->
+      <div id="productos-1">
+        <a href="#productos-1" >
+          <figure>
+            <picture>
+              <source srcset="img/img_pequeñas/clasica.cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/clasica.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+              <source srcset="img/img_pequeñas/clasica.jpg" media="(min-width: 769px)">						
+              <img src="img/img_pequeñas/clasica.jpg" alt=" Hamburguesa Clásica">
+            </picture>
+            <figcaption>
+              <h3>CLÁSICA</h3>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-close"><a href="#productos">&times;</a></span>
+            <div>
+              <h3>CLÁSICA</h3>
+              <picture>
+                <source srcset="img/img_pequeñas/clasica.cel.jpg" media="(max-width: 480px)">			
+                <source srcset="img/img_pequeñas/clasica.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+                <source srcset="img/img_pequeñas/clasica.jpg" media="(min-width: 769px)">								
+                <img src="img/img_pequeñas/clasica.jpg" alt="Hamburguesa de Clásica">
+              </picture>
+              <p> </p>				
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 2 -->
+      <div id="productos-2">
+        <a href="#productos-2" >
+          <figure>
+            <picture>
+              <source srcset="img/img_pequeñas/nuggets.cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/nuggets.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+              <source srcset="img/img_pequeñas/nuggets.jpg" media="(min-width: 769px)">						
+              <img src="img/img_pequeñas/nuggets.jpg" alt="Nuggets">
+            </picture>
+            <figcaption>
+              <h3>NUGGETS</h3>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-close"><a href="#productos">&times;</a></span>
+            <div>
+              <h3>NUGGETS</h3>
+              <picture>
+                <source srcset="img/img_pequeñas/nuggets.cel.jpg" media="(max-width: 480px)">			
+                <source srcset="img/img_pequeñas/nuggets.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+                <source srcset="img/img_pequeñas/nuggets.jpg" media="(min-width: 769px)">						
+                <img src="img/img_pequeñas/nuggets.jpg" alt="Nuggets">
+              </picture>		
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 3 -->
+      <div id="productos-3">
+        <a href="#productos-3" >
+          <figure>
+            <picture>
+              <picture>
+                <picture>
+                  <source srcset="img\img_pequeñas\vegana.cel.jpg" media="(max-width: 480px)">			
+                  <source srcset="img\img_pequeñas\vegana.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+                  <source srcset="img/img_pequeñas/vegana.jpg" media="(min-width: 769px)">						
+                  <img src="img/img_pequeñas/vegana.jpg" alt="Hamburgesa Vegana">
+                </picture>
+            <figcaption>
+              <h3>VEGANA</h3>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-close"><a href="#producto">&times;</a></span>
+            <div>
+              <h3>VEGANA</h3>
+              <picture>
+              <source srcset="img\img_pequeñas\vegana.cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img\img_pequeñas\vegana.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+              <source srcset="img/img_pequeñas/vegana.jpg" media="(min-width: 769px)">						
+              <img src="img/img_pequeñas/vegana.jpg" alt="Hamburgesa Vegana">
+            </picture>
+              <p> </p>				
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 4 -->
+      <div id="productos-4">
+        <a href="#productos-4" >
+          <figure>
+            <picture>
+              <source srcset="img/img_pequeñas/menu-infanil-150.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/menu-infanil-300.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+              <source srcset="img/img_pequeñas/men_inf.450.jpg" media="(min-width: 769px)">								
+              <img src="img/img_pequeñas/men_inf.450.jpg" alt="infantil">
+            </picture>
+            <figcaption>
+              <h3>INFANTIL </h3>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-close"><a href="#productos">&times;</a></span>
+            <div>
+              <h3>JUNIOR</h3>
+              <picture>
+              <source srcset="img/img_pequeñas/Hamburguesa_Junior_cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/menu-infanil-tablet.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+              <source srcset="img\img_pequeñas\Hamburguesa_Junior_300px.jpg" media="(min-width: 769px)">								
+              <img src="img\img_pequeñas\Hamburguesa_Junior_300px.jpg" alt="Infantil">
+            </picture>
+              <p></p>				
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 5 -->
+      <div id="producto-5">
+        <a href="#productos-5" >
+          <figure>
+            <picture>
+              <source srcset="img/img_pequeñas/ensalada.cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/ensalada.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+              <source srcset="img/img_pequeñas/ensalada.jpg" media="(min-width: 769px)">								
+              <img src="img/img_pequeñas/ensalada.jpg" alt="Ensalada">
+            </picture>
+            <figcaption>
+              <h3>ENSALADA</h3>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-close"><a href="#productos">&times;</a></span>
+            <div>
+              <h3>ENSALADA</h3>
+              <picture>
+                <source srcset="img/img_pequeñas/ensalada.cel.jpg" media="(max-width: 480px)">			
+                <source srcset="img/img_pequeñas/ensalada.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+                <source srcset="img/img_pequeñas/ensalada.jpg" media="(min-width: 769px)">								
+                <img src="img/img_pequeñas/ensalada.jpg" alt="Ensalada">
+              </picture>
+              <p>Con gran variedad de colores</p>				
+            </div>
+          </div>
+        </div>
+      </div>		
+      <!-- Producto 6 -->
+      <div id="Producto-6">
+        <a href="#producto-6" >
+          <figure>
+            <picture>
+              <source srcset="img/img_pequeñas/hamb-pollo.cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/hamb-pollo.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+              <source srcset="img/img_pequeñas/hamb-pollo.jpg" media="(min-width: 769px)">						
+              <img src="img/img_pequeñas/hamb-pollo.jpg" alt="Hamburguesa de pollo">
+            </picture>
+            <figcaption>
+              <h3>POLLO</h3>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-close"><a href="#producto">&times;</a></span>
+            <div>
+              <h3>POLLO</h3>
+              picture>
+              <source srcset="img/img_pequeñas/hamb-pollo.cel.jpg" media="(max-width: 480px)">			
+              <source srcset="img/img_pequeñas/hamb-pollo.tab.jpg" media="(min-width: 481px) and (max-width: 768px)">
+              <source srcset="img/img_pequeñas/hamb-pollo.jpg" media="(min-width: 769px)">						
+              <img src="img/img_pequeñas/hamb-pollo.jpg" alt="CPollo">
+            </picture>
+              <p>250 Grs. de pollo</p>				
+            </div>
+          </div>
+        </div>
+      </div>
+      				
+            </div>
+          </div>
+        </div>
+      </div>			
+    </div>
+
+  </section>
+
+  <!-------------------SECCIÓN DESTACADOS---------------------->
+
+  
+  <section id="Destacados">
+			
+    <h2>Destacados</h2>
+    
+    <article id="destacado1">
+      <picture>
+        <source srcset="bebidas\coca-celu.jpg" media="(max-width: 480px)">		
+        <source srcset="bebidas\coca-tablet.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+        <source srcset="bebidas\coca-pc.jpg" media="(min-width: 769px)">										
+        <img src="imagenes/articulos/nota_1_w330.jpg" alt="Nota 1">
+      </picture>			
+      <h3>¿Por qué la Coca-Cola ZERO es saludable?</h3>
+      <p>"Lo que sucede con la Coca-Cola Zero es que no lleva azúcar, pero como el cuerpo detecta el sabor dulce, segregas insulina igualmente, y esta se lleva el poco azúcar que tienes en sangre induciendo una fuerte bajada de glucosa.
+      </p>
+      
+    </article>
+
+    <article id="articulo2">
+      <picture>
+        <source srcset="bebidas\cerveza-pc.jpg" media="(max-width: 480px)">		
+        <source srcset="bebidas/cerveza-tablet.jpg" media="(min-width: 481px) and (max-width: 768px)">	
+        <source srcset="bebidas\cerveza-pc.jpg" media="(min-width: 769px)">										
+        <img src="bebidas\cerveza-cel.jpg" alt="Nota 2">
+      </picture>
+        <h3> ¿Por qué la cerveza artesanal es considerado un producto biotecnológico? </h3>
+  <p>La cerveza es uno de los productos biotecnológicos más antiguos y de mayor tradición, eso significa que su origen depende de un proceso en el que actúan organismos o sistemas vivos. Así, el sabor, color y olor característicos de la cerveza son resultado de la acción de unos microorganismos llamados levaduras.
+  </p>
+</article>
+  </section>
+    
+  
+
+ <!-------------------SECCIÓN VIDEO---------------------->
+  <section id="video">
+
+    <h2>Video de receta</h2>
+
+    <video controls poster="Fondo.jpg">
+      <source src="video\hambur.garbanzos.mp4.mp4" type="video/mp4">
+    </video>
+
+  </section>
+
+  
+
+  <!-------------------SECCIÓN NOSOTROS---------------------->
+
+<section id="nosotros">
+
+  <h2>Nosotros</h2>
+  
+  <div id="contenido-nosotros">
+    <div id="parrafos-nosotros">
+      <p>¡Bienvenido a nuestra hamburgueceria! </p>
+      <p>Tenemos gran variedad de productos acordes a tus neceesidades. También nos especializamos en comidad veganas para que todos se sientan en casa.
+        Nos vamos a presentar.</p>
+        <p>Hola, soy Cristian trabajo en Eco Burguer hace 2 años, me desempeño en el area de marketing,comunicación 
+        y redes sociales.</p>
+        <p>Soy un afortunado de trabajar en esta empresa porque  el trabajo en equipo es nuestro fuerte. </p>
+        <p>Hola soy Paula Treus tengo 25 años, trabajo en Eco Burguer hace 4 años, soy productiva trabajo en equipo simpatica, alegre sincera honesta mi especialidad es la parte de la empresa soy la la moza y cajera.
+      </p>
+    </div>
+
+    <div id="pictures-nosotros">
+      <a href="img\img_pequeñas\cris-celu.jpg" data-fancybox="picture-nosotros">	
+        <picture>
+        <source srcset="img\img_pequeñas\cris-celu.jpg" media="(max-width: 480px)">			
+        <source srcset="img\img_pequeñas\cristian.jpg" media="(min-width: 481px)">	
+          <img src="img\img_pequeñas\cristian.jpg" alt="Nosotros - Imagen 1">
+        </picture>
+      </a>
+      <a href="img\img_pequeñas\pau-celu.jpg" data-fancybox="picture-nosotros">	
+        <picture>
+          <source srcset="img\img_pequeñas\pau-celu.jpg" media="(max-width: 480px)">			
+          <source srcset="img\img_pequeñas\paula.jpg" media="(min-width: 481px)">	
+          <img src="img\img_pequeñas\paula.jpg" alt="Nosotros - Imagen 2">
+        </picture>
+      </a>
+    </div>
+  </section>
+    
+
+ <!-------------------FOOTER---------------------->
+<footer>
+
+  <h3>Síguenos y descubre productos y noticias</h3>
+
+  <div id="redes-sociales">
+    <a href="https://www.facebook.com">
+      <img src="iconos\facebook.png" alt="Logo facebook">
+    </a>
+    <a href="https://www.twitter.com">
+      <img src="iconos\twitter.png" alt="Logo twitter">
+    </a>			
+    <a href="https://www.instagram.com">
+      <img src="iconos\instagram.png" alt="Logo instagram">
+    </a>
+  </div>
+
+  <aside>
+    <div id="subscribir">
+      <h3>Suscribite y recibí nuestas novedades</h3>
+      <div>
+        <form action="enviar_formulario.php" enctype="application/x-www-form-urlencoded" method="post">
+          <div>
+            <label>Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu email" required>
+          </div>	
+          <div>
+            <label></label>
+            <input type="submit" value="Enviar Contacto">
+          </div>						
+          
+        </form>
+      </div>	
+    </div>
+    <div id="enviado" class="modal">
+      <div class="modal-content">
+       
+        <div>
+          <h3>Tu mensaje ha sido envidado correctamente</h3>
+		
+        </div>
+      </div>
+    </div>
+  </aside>
+  <h3>Treus - Pare 2023</h3>
+</footer>
+
+  
+  <script> 
+
+  let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("slides");
+				let dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+    </script>
+	</div>
+    </div>
+</body>
+</html>

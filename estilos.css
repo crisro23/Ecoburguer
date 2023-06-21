@@ -1,0 +1,751 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+@media only screen and (min-width: 769px){ 
+
+
+    
+	
+        article img {
+        width: 300px;
+        margin-right: 40px;
+        color: white;
+        }
+        
+        
+        article:nth-of-type(even) img { /* En desktop, alternar imagenes a la izquierda y derecha de los articulos. */
+        float: right;
+        margin-left:20px;
+        color: white;
+        }
+    
+        article {
+            margin: 15px;
+            color: white;
+        }
+    
+
+
+/*------ NOSOTROS---------*/
+
+
+h2{
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+p{
+    color: #aaa;
+}
+#pictures-nosotros {
+    display: flex; 
+    flex-direction: row; /* Las imagenes en fila */
+	flex-wrap: wrap; /* adapta al tamaño y sigue debaja */
+	justify-content: space-around; /* las distribuye en el espacio que tiene */
+	
+  
+
+}
+
+#parrafos-nosotros {
+	padding: 10 10 10 10;
+    display: flex; 
+    flex-direction: row; /* Las imagenes en fila */
+	flex-wrap: wrap; /* adapta al tamaño y sigue debaja */
+	justify-content: space-between; /* las distribuye en el espacio que tiene */
+    
+	
+
+}
+
+#pictures-nosotros img {
+    
+	width: 100%;
+    border-radius: 50%;
+    flex-direction: row;
+    
+}
+
+#pictures-nosotros a {
+	width: 33%;
+    border-radius: 45%;
+}
+
+#pictures-nosotros picture {
+	width:33%;
+}
+
+/*<!-------------------SECCIÓN PRODUCTOS---------------------->**/
+
+#productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;	/* las bebidas que fluyan como con float left */
+    justify-content: space-around; /* distribuir el espacio entre bebidas y con los bordes */
+}
+
+#productos figure{
+	position: relative; /* necesario para usar position absolute en el figcaption */
+}
+
+
+#productos img {
+	max-height: 450px; /* No exceder para no tener que hacer scroll en el modal */
+}
+
+#productos figcaption {    
+    position: absolute; /* EL nombre de la bebida sobre la imagen */
+    bottom: 10px; /* abajo */
+    left: 10px;	/* y a la izquierda */
+	color: white;	/* El nombre de la bebida en blanco */
+    background: rgba(255, 139, 14, 0.5);	/* con un fondo gris semi transparente */
+}
+
+#productos figcaption h3 {    
+    font-size: 0.8rem;	/* Etiqueta con el nombre de la bebida más pequeño */
+}
+
+
+#productos div:target .modal {
+	display: block; /* Abrir la ventana modal de la bebida con el target */
+}
+
+/************************************
+ Ventana modal de bebidas
+*************************************/
+.modal {
+  display: none; /* Oculta por default */
+  position: fixed; /* Fija y ocupando toda la pantalla*/
+  left: 10;
+  top: 10;  
+  width: 100%; 
+  height: 100%; 
+  z-index: 99; /* encima de todo */
+  padding-top: 100px; /* para que el box quede 100px debajo del top de la pantalla */
+  background-color: rgba(250, 0, 0, 0.4); /* Poner gris el fondo */
+}
+
+.modal-content {
+  position: relative;
+  background-color: white; /* fondo blanco, por encima del gris transparente */ 
+  margin: auto; /* contenido centrado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 4px 8px 0 rgba(255, 4, 4, 0.2),0 6px 20px 0 rgba(0,0,0,0.19); /* effecto shadow para "separar" el modal del fondo */
+  animation-name: animatetop; 
+  animation-duration: 0.4s
+}
+
+.modal-content div{
+	text-align: center;
+}
+
+.modal-close a {
+  color: #aaaaaa;
+  float: right;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+}
+
+footer {
+    background-color: rgb(255, 217, 0);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-around;	
+
+}
+
+#redes {
+	display: flex;
+  	flex-wrap: wrap;	
+	justify-content: space-around;	
+	width:100%;
+	max-width:650px;
+	margin:auto;
+}
+
+#redes a:hover {
+	transform: scale(1.2);
+	transition: all 0.2s ease-in;
+}
+
+#redes img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 15px;	
+}
+
+
+#subscribir p{
+	color:white;
+	width: 100%;
+	text-align: center;
+}
+
+#subscribir form {
+	width: 100%;
+}
+
+#subscribir form div {
+	margin-bottom:10px;
+}
+
+
+#subscribir form label {
+	display: none;
+}
+
+#subscribir input { /* Campos nombre e email, y boton submit */
+	width:100%;
+	height: 1.5rem;
+}
+
+#subscribir input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(125, 66, 5);
+  opacity: 1;
+}
+
+#subscribir input[type=submit] {  /* boton submit */
+  background-color: rgb(255, 187, 0);
+  border-radius: 15px; 
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 4px 16px;
+  height: 1.7rem;
+}
+
+#enviado:target {
+	display: block; /* Abrir la ventana modal de la bebida con el target */
+}
+
+/* Tablet y desktop */
+@media only screen and (min-width: 481px) {
+
+	#subscribir form div {
+		display: flex;
+	  	flex-wrap: nowrap;
+		align-items: baseline;
+	}
+	
+	
+	#subscribir form label {
+		display: block;
+		width: 4rem;
+		text-align: left;
+		font-size: 0.8rem;
+		color: rgb(255, 255, 255);
+	}
+	
+	#subscribir input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	  opacity: 0;
+	}
+	
+}
+
+/*------ Tableta---------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------PC------------- */
+/**********************************************
+ Sección de Menu Bar (Header con Logo y burger)
+***********************************************/
+
+ul {
+    list-style-type: none;
+}
+
+#logo {
+	
+	background: url("iimg/logos/logo.png") no-repeat;
+	height: 55px;
+	width: 340px;
+    font-size: 0;
+    overflow: hidden;	
+    
+	position: absolute;
+    top: 5px;
+    left: 10px;	
+}
+
+header {
+	position:fixed;
+	top:0;
+	left:0;
+    height: 55px;
+	width: 100%;
+	background: rgb(255, 255, 255);
+	z-index: 99;
+}
+
+#menu-bar {
+	display: flex;
+	flex-wrap: nowrap; /* es una barra, no romper */
+}
+
+#burger {
+	display:block;
+}
+
+/* Tablet y Desktop */
+@media only screen and (min-width: 577px) {
+
+	#logo {
+		height: 80px;
+		width: 340px;		
+		background-image: url("img/logos/logo.png");
+	}
+
+	header {
+		height: 90px;
+	}
+	
+	body {
+		padding-top: 90px;
+	}
+
+}
+
+/** El Burguer Menu  ****/
+
+#burger-lines {
+  display: block;
+  position: absolute; /* Siempre fijo en la misma */
+  top: 15px;  /* arriba */
+  right: 10px;  /* a la derecha */
+  z-index: 2; /* mostrar por encima del resto de la pagina */
+}
+
+#barra {
+    display:  none; /* comienza oculto */
+    position: absolute; /* Siempre fijo en la misma posición */
+    top: 55px; /* arriba */
+    left: 0; /* pegado al borde izquierdo */
+	width: 100%; /* ocupando todo el ancho de la pantalla */
+    z-index: 99; /* mostrar por encima del resto de la pagina */
+	background: rgb(252, 184, 57); /* Letras blancas */
+}
+
+#menu:target #barra{
+    display:block; /* Mostrar el menu si se hizo click en el burger icon */
+}
+
+#menu:target #burger-lines{
+    display:none; /* Ocultar el icono de burger cuando se desplegó el menú */
+}
+
+
+#burger-close {
+    position: fixed; /* Siempre fijo en la misma */
+    top: 8px;  /* arriba */
+    right: 16px;  /* a la derecha */
+}
+
+#barra li a{
+	text-decoration:none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color:rgb(0, 0, 0);
+	display: inline-block;
+	width:100%;
+}
+
+#barra li:first-child a{ /* Signo X */
+	color: rgb(0, 2, 104);
+}
+
+#barra li {
+    margin-bottom: 1.2rem; /* separar cada link del menú para que no queden pegados */
+    font-size: 1.5rem; /* tamaño de los links del menú */
+    font-weight: 500; /* */
+	border-bottom: 1px dotted rgb(203, 148, 69); /* línea de separacíon entre items del menú */
+}
+
+
+/* Tablet y Desktop */
+
+
+	#burger-lines {
+	  top: 25px;  /* ajustar la posicion un poco para acomodar la barra mas grande para tablet y desktop */
+	  right: 20px;
+	}
+	
+	#burger-close {
+	  top: 22px;  /* ajustar la posicion un poco para acomodar la barra mas grande para tablet y desktop */
+	  right: 28px;		
+	}
+	
+	#barra {
+	    top: 90px; /* ajustar la posicion un poco para acomodar la barra mas grande para tablet y desktop */
+	}
+	
+	section {
+		scroll-margin-top: 88px;/* Para reservar el espacio del menu bar cuando saltamos a un achor con el menú */
+								
+	}
+
+
+    #barra li {
+        display: inline; /* Los items del menú, uno al lado de otro */
+        border-bottom: none; /* Sin borde de separación en desktop, porque están uno al lado de otro */
+    }
+    
+    #barra li a{
+        font-size: 1rem;
+      margin-left: 10px;
+      width: auto;
+    }
+    
+    #barra {
+        display:  block; /*  El menú no está oculto en desktop */
+        position: fixed; /* Siempre fijo en la misma posición */
+        top: 33px; /* arriba */
+        left: -30px; /* despegado 20px del borde derecho */
+        background: none; /* sin blanco de fondo, por si se sobreimpone al logo */
+        text-align: right; /* el menú a la derecha del logo */
+        
+     }
+     
+     #burger-close, #burger-lines {
+         display: none; /* No hay burguer menú en desktop */
+     }
+    
+    
+
+
+/* Desktop */
+@media only screen and (min-width: 769px) {
+	html{
+		font-size: 140%;
+	}
+}	
+
+
+/*banner*/
+
+    #carrusel {
+        padding:0; /* Imagenes del carrusel pegadas a los bordes */
+    }
+    
+    #carrusel h2 {
+        display: none;
+    }
+    
+    .slides img {
+      width:100%; /* Imagenes del carrusel ocupan todo el ancho de la pantalla */
+    }
+    
+    /* Desktop */
+    @media only screen and (min-width: 769px) {
+        
+        .slides img {
+            border-radius: 25px;
+        }
+        
+        #carrusel {
+            padding: 10px;
+        }
+        
+    }
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.125rem;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(189, 166, 141, 0.5);  
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(247, 230, 0, 0.5);    
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 5px 5px 0 0;
+      background-color: rgb(250, 3, 3);
+      border-radius: 15%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: rgb(211, 126, 7);
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.3s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+
+
+/* NOSOTROS */
+	#pictures-nosotros {
+		flex-direction: row; /* En desktop, porner las imagenes en fila */
+		flex-wrap: nowrap; /* en una única fila, no wrap */ 
+	    overflow: hidden; /* Ir ocultando imagenes que sobresalen al ajustar la pantalla. No scroll */
+	    margin-top: 40px;
+	    margin-bottom: -10px;	
+	}
+	
+	#contenido-nosotros {
+		flex-wrap: wrap; /* En desktop, el texto denajo de las imagenes, en lugar de lado a lado */ 
+	}
+
+
+
+
+
+
+
+
+/* ----------SECCIÓN DESTACADOS------------- */
+#destacados {
+    display: block;
+
+}
+.destacados-title {
+    padding: 40px;
+}
+.Destacados1y2 {
+    display: block;
+
+}
+.Destacados1y2 div {
+    display: block;
+    
+    padding: 20px;
+    
+}
+.Destacados1y2 div img {
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 20px;
+}
+/* ----------4ta seccion Video------------- */
+
+#Video {
+ width: 100%;
+}
+
+/* ----------5ta seccion Galeria------------- */
+#galeria {
+    display: block;
+    margin: 10px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+.columna {
+    display: flex;
+    flex-wrap: wrap ;
+
+    justify-content: center;
+    padding: 10px;
+}
+.columna img {
+    margin: 5px;
+    transition: 0.5s;
+    object-fit: cover;/*distorsion*/
+}
+.columna img:hover {
+    transform: scale(1.3);
+} /*escala la imagen*/
+/* ----------6ta seccion Nosotros-------- */
+
+.avatars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+/* ---   height: 600px;
+    width: 600px;-- */
+    padding: 10px;
+}
+.avatars img {
+    max-width: 100%;
+    width: 100%;
+    padding: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.avatars img:hover {
+    transform: scale(1.1);
+}
+.avatars div {
+    margin: 40px;
+}
+
+
+
+
+    
+
+/*-----------------------------------*/
+
+
+
+
+
+    /* ----------3era sec------------- */
+
+
+    form {
+        width: 100%;
+        padding: 20px;
+        margin: auto;
+        background-color: rgb(97, 95, 95);
+    }
+    
+    .control {
+        display: flex;
+        margin: .5em 0;
+    }
+    
+    .control:first-child, .control:nth-child(2) {
+        align-items: center;
+    }
+    
+    .control label {
+        flex: 0 100px;
+    }
+    
+    .control input,
+    .control textarea,
+    .control select,
+    .control > div {
+        flex: 1;
+        padding: .3rem .5rem;
+    }
+    
+    .control > div {
+        background: white;
+        border: 1px solid #aaa;
+    }
+    
+    .control div div {
+        margin: .3em 0;
+    }
+    
+    form > div:last-child {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1em 0 0 0;
+    }
+    
+    input[type="submit"] {
+        padding: .6em 1.3em;
+        background-color: orange;
+        color: rgb(3, 3, 3);
+        border: 1px solid #aaa;
+    }
+    
+    input[type="reset"] {
+        padding: .6em 1em;
+        background-color: white;
+        border: 1px solid #aaa;
+        margin-right: .3em;
+    }
+
+
+    #Destacados {
+        display: block;
+    
+    }
+    .Destacados-title {
+        padding: 20px;
+    }
+    .Destacados1y2 {
+        display: block;
+    }
+    .Destacados1y2 div {
+        padding: 10px;
+    }
+    .Destacados1y2 div img {
+        
+        padding: 20px;
+    }  
+
+
+
+    /* ----------Footer------------- */
+
